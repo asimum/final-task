@@ -8,11 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-<<<<<<< HEAD
                 checkout scm
-=======
-                git branch: "${BRANCH_NAME}", url: 'https://github.com/asimum/cicd-training.git'
->>>>>>> dev
             }
         }
 
