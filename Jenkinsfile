@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:18'  // or any Node version your app uses
+        }
+    }
 
     environment {
         PORT = "${BRANCH_NAME == 'main' ? '3000' : '3001'}"
